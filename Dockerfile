@@ -1,7 +1,7 @@
 FROM ubuntu
 VOLUME /tmp/.X11-unix
 RUN apt update \
- && DEBIAN_FRONTEND=noninteractive apt install -y wget gnupg xvfb x11-xserver-utils python3-pip inotify-tools \
+ && DEBIAN_FRONTEND=noninteractive apt install -y wget gnupg xvfb x11-xserver-utils python3-pip inotify-tools nano \
  # pulseaudio
  lxterminal \
  && pip3 install pyinotify \

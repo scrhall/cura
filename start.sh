@@ -1,2 +1,2 @@
-xhost + &
-cd /root/gcode/ && ./DownloadWatcher.sh
+cd /root/gcode/ && ./DownloadWatcher.sh &
+xhost +
