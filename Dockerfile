@@ -12,7 +12,10 @@ RUN apt update \
  && mkdir -p /run/user/0/xpra
 RUN wget https://software.ultimaker.com/cura/Ultimaker_Cura-4.10.0.AppImage
 RUN chmod +x /Ultimaker_Cura-4.10.0.AppImage
-RUN echo "/Ultimaker_Cura-4.10.0.AppImage" > /cura.sh && chmod +x cura.sh
+
+RUN wget https://mango-lychee.nyc3.cdn.digitaloceanspaces.com/LycheeSlicer-3.5.1.AppImage
+RUN chmod +x /LycheeSlicer-3.5.1.AppImage
+
 ENV APPIMAGE_EXTRACT_AND_RUN=1
 ENV NO_CLEANUP=1
 ENTRYPOINT ["xpra", "start", ":80", "--bind-tcp=0.0.0.0:8080", \
